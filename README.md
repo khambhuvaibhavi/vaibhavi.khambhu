@@ -1,1 +1,29 @@
 # vaibhavi.khambhu
+
+def AND(a,b):   
+    return a&b&1
+    
+def OR(a,b): 
+    return a|b
+
+def NOT (a):
+    return int(not a)
+ 
+def NOR(a,b):  
+    ans = OR(a,b)
+    return NOT(ans)
+
+ 
+
+j = int(input())
+k = int(input())
+Qp = int(input())
+
+
+r = AND(k,Qp)
+s = AND(j,NOT(Qp))
+
+a1 = NOR(s,Qp)
+Qn = NOR(r,a1)
+
+print(Qn)
